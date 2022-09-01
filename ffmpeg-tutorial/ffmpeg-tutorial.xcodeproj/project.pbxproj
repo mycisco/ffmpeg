@@ -13,6 +13,11 @@
 		A54DE59428C046F400DD80CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54DE59228C046F400DD80CB /* Main.storyboard */; };
 		A54DE59628C046F500DD80CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54DE59528C046F500DD80CB /* Assets.xcassets */; };
 		A54DE59928C046F500DD80CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54DE59728C046F500DD80CB /* LaunchScreen.storyboard */; };
+		A54DE5C328C0702B00DD80CB /* FFmpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54DE5C228C0702B00DD80CB /* FFmpeg.framework */; };
+		A54DE5C628C070ED00DD80CB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A54DE5C528C070ED00DD80CB /* libz.tbd */; };
+		A54DE5C828C070F400DD80CB /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A54DE5C728C070F400DD80CB /* libbz2.tbd */; };
+		A54DE5CA28C0710300DD80CB /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A54DE5C928C0710300DD80CB /* libiconv.tbd */; };
+		A54DE5CC28C0745A00DD80CB /* h264.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A54DE5CB28C0741F00DD80CB /* h264.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		A54DE59528C046F500DD80CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A54DE59828C046F500DD80CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A54DE59A28C046F500DD80CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A54DE5C228C0702B00DD80CB /* FFmpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FFmpeg.framework; path = "FFmpeg-iOS-build-script/FFmpeg.framework"; sourceTree = SOURCE_ROOT; };
+		A54DE5C528C070ED00DD80CB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A54DE5C728C070F400DD80CB /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		A54DE5C928C0710300DD80CB /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		A54DE5CB28C0741F00DD80CB /* h264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = h264.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54DE5CA28C0710300DD80CB /* libiconv.tbd in Frameworks */,
+				A54DE5C828C070F400DD80CB /* libbz2.tbd in Frameworks */,
+				A54DE5C628C070ED00DD80CB /* libz.tbd in Frameworks */,
+				A54DE5C328C0702B00DD80CB /* FFmpeg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +56,7 @@
 			children = (
 				A54DE58B28C046F400DD80CB /* ffmpeg-tutorial */,
 				A54DE58A28C046F400DD80CB /* Products */,
+				A54DE5C428C070ED00DD80CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +71,8 @@
 		A54DE58B28C046F400DD80CB /* ffmpeg-tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				A54DE5A028C04E3100DD80CB /* FFMPEG */,
+				A54DE5C228C0702B00DD80CB /* FFmpeg.framework */,
+				A54DE5CB28C0741F00DD80CB /* h264.mp4 */,
 				A54DE58C28C046F400DD80CB /* AppDelegate.swift */,
 				A54DE58E28C046F400DD80CB /* SceneDelegate.swift */,
 				A54DE59028C046F400DD80CB /* ViewController.swift */,
@@ -68,11 +84,14 @@
 			path = "ffmpeg-tutorial";
 			sourceTree = "<group>";
 		};
-		A54DE5A028C04E3100DD80CB /* FFMPEG */ = {
+		A54DE5C428C070ED00DD80CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A54DE5C928C0710300DD80CB /* libiconv.tbd */,
+				A54DE5C728C070F400DD80CB /* libbz2.tbd */,
+				A54DE5C528C070ED00DD80CB /* libz.tbd */,
 			);
-			path = FFMPEG;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +155,7 @@
 				A54DE59928C046F500DD80CB /* LaunchScreen.storyboard in Resources */,
 				A54DE59628C046F500DD80CB /* Assets.xcassets in Resources */,
 				A54DE59428C046F400DD80CB /* Main.storyboard in Resources */,
+				A54DE5CC28C0745A00DD80CB /* h264.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +313,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28K9LD277B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FFmpeg-iOS-build-script",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ffmpeg-tutorial/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -302,6 +328,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +336,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "afreecatv.com.ffmpeg-tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = develop_wildcard;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,8 +348,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28K9LD277B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FFmpeg-iOS-build-script",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ffmpeg-tutorial/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -329,6 +363,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +371,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "afreecatv.com.ffmpeg-tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = develop_wildcard;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
